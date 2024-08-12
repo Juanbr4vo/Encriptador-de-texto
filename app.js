@@ -9,6 +9,7 @@ function restricciones(textarea) {
     });
     
 }
+
 function encriptarTexto() {
     textoEncriptar = document.getElementById('textarea').value;
     imgMuneco = document.getElementById('imagenMuneco');
@@ -21,15 +22,14 @@ function encriptarTexto() {
 
     paddingDivTextoEncriptado.style.padding = "0px";
 
-
-    if (textoEncriptar.value === "") {
-        alert('No hay texto a encriptar')
-    }else{
-        imgMuneco.style.display = 'none';
-        conatinerTextos.style.display = 'none';
-        textoEncriptado.style.display = 'flex';
-        botonCopiar.style.display = 'flex';
-    }
+     if (textoEncriptar.trim() === "") {
+         alert('No hay texto a encriptar');
+     }else{
+         imgMuneco.style.display = 'none';
+         conatinerTextos.style.display = 'none';
+         textoEncriptado.style.display = 'flex';
+         botonCopiar.style.display = 'flex';
+     }
 }
 function blueDark() {
     document.documentElement.style.setProperty('--color-backaground-TextoDesencriptar', 'red');
