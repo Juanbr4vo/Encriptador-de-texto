@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900');
 
+:root {
+    --color-backaground: #F3F5FC;
+    --color-texto-h2: #343A40;
+    --color-texto-p: #495057;
+    --color-backaground-TextoDesencriptar: #FFFFFF;
+    --color-background-boton-encriptar: #0A3871;
+    --color-background-boton-Desencriptar: #D8DFE8;
+    --color-text-boton-encriptar: #FFFFFF;
+    --color-text-boton-Desencriptar: #0A3871;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +18,7 @@
 }
 
 body {
-    background-color: #F3F5FC;
+    background-color: var(--color-backaground);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -47,7 +58,7 @@ body {
 
 ::placeholder {
     font-family: "Inter", sans-serif;
-    color: #0A3871;
+    color: var(--color-background-boton-encriptar);
     font-size: 1.7rem;
 }
 
@@ -59,9 +70,9 @@ body {
     margin-right: 20%;
     border: none;
     outline: none;
-    background-color: #F3F5FC;
+    background-color: var(--color-backaground);
     font-family: "Inter", sans-serif;
-    color: #0A3871;
+    color: var(--color-background-boton-encriptar);
     font-family: Inter;
     font-size: 1.7rem;
     font-weight: 350;
@@ -72,7 +83,6 @@ body {
     display: flex;
     margin-top: 0.5%;
     font-family: "Inter", sans-serif;
-    color: #495057;
     font-size: 0.65rem;
     gap: 0.2%;
 }
@@ -89,9 +99,9 @@ body {
     padding: 2.2% 0% 2.2% 0%;
     flex-shrink: 0;
     border-radius: 1.2rem;
-    background: #0A3871;
+    background: var(--color-background-boton-encriptar);
     font-size: 1rem;
-    color: #FFFFFF;
+    color: var(--color-text-boton-encriptar);
     font-style: normal;
     font-weight: 350;
     font-family: "Inter", sans-serif;
@@ -102,10 +112,10 @@ body {
     padding: 2.2% 0% 2.2% 0%;
     flex-shrink: 0;
     border-radius: 1.2rem;
-    border: 1px solid #0A3871;
-    background: #D8DFE8;
+    border: 1px solid var(--color-text-boton-Desencriptar);
+    background: var(--color-background-boton-Desencriptar);
     font-size: 1rem;
-    color: #0A3871;
+    color: var(--color-text-boton-Desencriptar);
     font-style: normal;
     font-weight: 350;
     font-family: "Inter", sans-serif;
@@ -122,16 +132,51 @@ body {
     flex-direction: column;
     align-items: center;
     height: auto;
-    background-color: #FFFFFF;
+    background-color: var(--color-backaground-TextoDesencriptar);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 24px;
 }
 
+.div_textoDesencriptado-textoEncriptado {
+    display: none;
+    width: auto;
+    height: 80%;
+    margin-top: 7%;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+
+}
+#textoEncriptado{
+    width: auto;
+    padding: 4%;
+    
+}
+#div_botonCopiar{
+    box-sizing: border-box;
+    display: none;
+    width: 100%;
+    height: 9%;
+    justify-content: center;
+}
+#botonCopiar {
+    width: 90%;
+    flex-shrink: 0;
+    border-radius: 1.2rem;
+    border: 1px solid var(--color-text-boton-Desencriptar);
+    background: var(--color-backaground-TextoDesencriptar);
+    font-size: 1rem;
+    color: var(--color-text-boton-Desencriptar);
+    font-style: normal;
+    font-weight: 350;
+    font-family: "Inter", sans-serif;
+}
+
 .div_textoDesencriptado-imagenmuneco {
     padding: 0% 0% 32px 0%;
-    width: 70%;
+    width: 100%;
     height: auto;
-    background-color: #FFFFFF;
+    background-color: var(--color-backaground-TextoDesencriptar);
 }
 
 .div_textoDesencriptado-containertextos {
@@ -146,197 +191,72 @@ body {
 }
 
 h2 {
-    color: #343A40;
+    color: var(--color-texto-h2);
     margin-bottom: 7%;
 }
 
+#mensajeIndicativo {
+    color: #495057;
+}
+
 p {
-    color: #495057;
+    color: var(--color-texto-p);
 }
 
-/* .container_main {
-    display: flex;
-    float: left;
-    box-sizing: border-box;
-    width: auto;
-    height: 100vh;
-    margin: auto;
-}
-
-.div_principal {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    box-sizing: border-box;
-    width: 72%;
-    height: 90%;
-}
-
-.div_principal-logoAlura {
-    margin: 2% 0% 0% 0%;
-    width: 10%;
-    display: flex;
-    flex-direction: row;
-    float: left;
-}
-
-::placeholder {
-    font-family: "Inter", sans-serif;
-    color: #0A3871;
-    font-size: 1.8rem;
-}
-
-#textarea {
-    width: 160%;
-    height: 55vh;
-    padding: 0%;
-    margin-top: 0%;
-    border: none;
-    outline: none;
-    background-color: #F3F5FC;
-    font-family: "Inter", sans-serif;
-    color: #0A3871;
-    font-family: Inter;
-    font-size: 1.8rem;
-    font-weight: 400;
-    resize: none;
-}
-
-.div_principal-textoEncriptar {
-    margin: 120px 0px 0px 40px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-
-.div_principal-botones {
-    display: flex;
-    margin: 1.5% 0% 0% 6%;
-    width: 90%;
-    gap: 1.5rem;
-}
-
-.div_principal-botonEncriptar {
-    width: 45%;
-    padding: 3%;
-    flex-shrink: 0;
-    border-radius: 1.5rem;
-    background: #0A3871;
-    font-size: 1rem;
-    color: #FFFFFF;
-    font-style: normal;
-    font-weight: 350;
-    font-family: "Inter", sans-serif;
-}
-
-.div_principal-botonDesencriptar {
-    width: 45%;
-    padding: 3%;
-    flex-shrink: 0;
-    border-radius: 1.5rem;
-    border: 1px solid #0A3871;
-    background: #D8DFE8;
-    font-size: 1rem;
-    color: #0A3871;
-    font-style: normal;
-    font-weight: 350;
-    font-family: "Inter", sans-serif;
-}
-
-.div_principal-mensajeIndicativo {
-    display: flex;
-    font-family: "Inter", sans-serif;
-    color: #495057;
-    font-size: 0.75rem;
-}
-
-.div_secundario {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-items: center;
-    width: 25%;
-    height: auto;
-    margin: 2% 1% 3% 0%;
-    padding-bottom: 10%;
-    background-color: #FFFFFF;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    border-radius: 24px;
-}
-
-.div_secundario-imagenmuneco {
-    flex-shrink: 0;
-    padding: 30% 0% 32px 0%;
-    width: 65%;
-}
-
-.div_secundario-containertextos {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    text-align: center;
-    font-size: 0.8rem;
-    width: auto;
-}
-
-@media (max-width: 1200px){
-    .container_main{
-        display: flex;
-        flex-direction: column;
-        width: auto;
-    }
-    .div_secundario-imagenmuneco{
-        width: 0%;
-        height: 0%;
-    }
-    .div_principal-logoAlura {
-        margin: 2% 0% 0% 0%;
-        width: 100vh;
-        height: 100vh;
-        display: flex;
-        flex-direction: row;
-        float: left;
-    }
-} */
 @media (max-width: 1200px) {
-    .div_logoAlura{
-        margin-bottom: 20%;
+    .div_logoAlura {
+        margin-bottom: 25%;
     }
-    .div_main{
+
+    .div_main {
         display: flex;
         flex-direction: column;
         margin: 0%;
     }
-    #textarea{
+
+    #textarea {
         width: 90%;
         padding-left: 0%;
         margin-left: 4%;
+        font-size: 2.5rem;
     }
-    .div_textoEncriptar{
+
+    ::placeholder {
+        font-size: 2.5rem;
+    }
+
+    .div_textoEncriptar {
         width: 100%;
         margin-left: 0%;
     }
+
     .div_textoEncriptar-mensajeIndicativo {
         margin: 0%;
         padding-right: 10%;
+        font-size: 1rem;
     }
-    .div_textoEncriptar-botones{
+
+    .div_textoEncriptar-botones {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 3%;
     }
-    .div_textoEncriptar-botonEncriptar{
+
+    .div_textoEncriptar-botonEncriptar {
         width: 100%;
         padding: 4% 0% 4% 0%;
+        font-size: 1.5rem;
     }
-    .div_textoEncriptar-botonDesencriptar{
+
+    .div_textoEncriptar-botonDesencriptar {
         width: 100%;
         padding: 4% 0% 4% 0%;
+        font-size: 1.5rem;
     }
-    .div_textoDesencriptado{
+
+    .div_textoDesencriptado {
         width: auto;
         margin-top: 15%;
         margin-bottom: 10%;
@@ -349,5 +269,9 @@ p {
     .div_textoDesencriptado-imagenmuneco {
         width: 0%;
         height: 0%;
+    }
+
+    .div_textoDesencriptado-containertextos {
+        font-size: 1.2rem;
     }
 }

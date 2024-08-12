@@ -35,21 +35,30 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <p>Solo letras mínusculas y sin acentos</p>
+                <p id="mensajeIndicativo">Solo letras mínusculas y sin acentos</p>
             </div>
-            <div class="div_textoEncriptar-botones">
-                <button class="div_textoEncriptar-botonEncriptar" type="button">Encriptar</button>
-                <button class="div_textoEncriptar-botonDesencriptar" type="button">Desencriptar</button>
+            <div id="" class="div_textoEncriptar-botones">
+                <button onclick="encriptarTexto();" id="div_textoEncriptar-botonEncriptar"
+                    class="div_textoEncriptar-botonEncriptar">Encriptar</button>
+                <button class="div_textoEncriptar-botonDesencriptar">Desencriptar</button>
             </div>
         </div>
-        <div class="div_textoDesencriptado">
-            <img class="div_textoDesencriptado-imagenmuneco" src="./assets/muñeco.png" alt="muñeco con una lupa">
-            <div class="div_textoDesencriptado-containertextos">
+        <div id="div_textoDesencriptado" class="div_textoDesencriptado">
+            <div id="div_textoEncriptado" class="div_textoDesencriptado-textoEncriptado">
+                <p id="textoEncriptado"></p>
+            </div>
+            <div id="div_botonCopiar">
+                <button id="botonCopiar">Copiar</button>
+            </div>
+            <img id="imagenMuneco" class="div_textoDesencriptado-imagenmuneco" src="./assets/muñeco.png"
+                alt="muñeco con una lupa">
+            <div id="containerTextos" class="div_textoDesencriptado-containertextos">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
