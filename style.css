@@ -3,21 +3,164 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    width: 1440px;
-    height: 1024px;
     background-color: #F3F5FC;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+
+.div_logoAlura {
+    margin: 2% 0% 0% 0%;
+    padding: 0%;
     display: flex;
     flex-direction: row;
-    box-sizing: border-box;
-    justify-content: space-between;
-    
+    position: relative;
 }
-.main{
+
+.div_main {
     display: flex;
+    justify-content: center;
     box-sizing: border-box;
+    width: auto;
+    height: 90vh;
+}
+
+
+
+.div_textoEncriptar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    width: 65%;
+    height: 70vh;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 0%;
+    padding-top: 2%;
+}
+
+::placeholder {
+    font-family: "Inter", sans-serif;
+    color: #0A3871;
+    font-size: 1.7rem;
+}
+
+#textarea {
+    box-sizing: border-box;
+    width: auto;
+    height: 70vh;
+    padding: 0%;
+    margin-right: 20%;
+    border: none;
+    outline: none;
+    background-color: #F3F5FC;
+    font-family: "Inter", sans-serif;
+    color: #0A3871;
+    font-family: Inter;
+    font-size: 1.7rem;
+    font-weight: 350;
+    resize: none;
+}
+
+.div_textoEncriptar-mensajeIndicativo {
+    display: flex;
+    margin-top: 0.5%;
+    font-family: "Inter", sans-serif;
+    color: #495057;
+    font-size: 0.65rem;
+    gap: 0.2%;
+}
+
+.div_textoEncriptar-botones {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    margin-top: 0.5%;
+}
+
+.div_textoEncriptar-botonEncriptar {
+    width: 42%;
+    padding: 2.2% 0% 2.2% 0%;
+    flex-shrink: 0;
+    border-radius: 1.2rem;
+    background: #0A3871;
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 350;
+    font-family: "Inter", sans-serif;
+}
+
+.div_textoEncriptar-botonDesencriptar {
+    width: 42%;
+    padding: 2.2% 0% 2.2% 0%;
+    flex-shrink: 0;
+    border-radius: 1.2rem;
+    border: 1px solid #0A3871;
+    background: #D8DFE8;
+    font-size: 1rem;
+    color: #0A3871;
+    font-style: normal;
+    font-weight: 350;
+    font-family: "Inter", sans-serif;
+}
+
+.div_textoDesencriptado {
+    box-sizing: border-box;
+    display: flex;
+    width: 20%;
+    height: 100vh;
+    margin-top: -3.5%;
+    margin-bottom: 3%;
+    padding-top: 10%;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+}
+
+.div_textoDesencriptado-imagenmuneco {
+    padding: 0% 0% 32px 0%;
+    width: 70%;
+    height: auto;
+    background-color: #FFFFFF;
+}
+
+.div_textoDesencriptado-containertextos {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    width: 70%;
+}
+
+h2 {
+    color: #343A40;
+    margin-bottom: 7%;
+}
+
+p {
+    color: #495057;
+}
+
+/* .container_main {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    width: auto;
+    height: 100vh;
+    margin: auto;
 }
 
 .div_principal {
@@ -25,106 +168,186 @@ body {
     flex-direction: column;
     text-align: center;
     box-sizing: border-box;
+    width: 72%;
+    height: 90%;
 }
 
 .div_principal-logoAlura {
-    flex-shrink: 0;
-    margin: 40px 0px 0px 40px;
+    margin: 2% 0% 0% 0%;
+    width: 10%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    float: left;
 }
 
 ::placeholder {
     font-family: "Inter", sans-serif;
     color: #0A3871;
+    font-size: 1.8rem;
 }
+
 #textarea {
-    width: 577px;
-    height: 600px;
+    width: 160%;
+    height: 55vh;
+    padding: 0%;
+    margin-top: 0%;
     border: none;
     outline: none;
     background-color: #F3F5FC;
     font-family: "Inter", sans-serif;
     color: #0A3871;
     font-family: Inter;
-    font-size: 32px;
+    font-size: 1.8rem;
     font-weight: 400;
-    /* line-height: 150%; */
-    /* 48px */
+    resize: none;
 }
 
 .div_principal-textoEncriptar {
-    margin: 120px 181px 0px 240px;
+    margin: 120px 0px 0px 40px;
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
 
 .div_principal-botones {
     display: flex;
-    margin: 16px 85px 72px 240px;
-    width: 670px;
-    gap: 24px;
+    margin: 1.5% 0% 0% 6%;
+    width: 90%;
+    gap: 1.5rem;
 }
 
 .div_principal-botonEncriptar {
-    width: 328px;
-    padding: 24px;
-    align-items: flex-start;
+    width: 45%;
+    padding: 3%;
     flex-shrink: 0;
-    border-radius: 24px;
-    background:#0A3871;
-    font-size: 16px;
+    border-radius: 1.5rem;
+    background: #0A3871;
+    font-size: 1rem;
     color: #FFFFFF;
     font-style: normal;
     font-weight: 350;
     font-family: "Inter", sans-serif;
 }
-.div_principal-botonDesencriptar{
-    width: 328px;
-    padding: 24px;
-    align-items: flex-start;
+
+.div_principal-botonDesencriptar {
+    width: 45%;
+    padding: 3%;
     flex-shrink: 0;
-    border-radius: 24px;
+    border-radius: 1.5rem;
     border: 1px solid #0A3871;
-    background:#D8DFE8;
-    font-size: 16px;
-    color:#0A3871;
+    background: #D8DFE8;
+    font-size: 1rem;
+    color: #0A3871;
     font-style: normal;
     font-weight: 350;
     font-family: "Inter", sans-serif;
 }
-.div_principal-mensajeIndicativo{
+
+.div_principal-mensajeIndicativo {
     display: flex;
     font-family: "Inter", sans-serif;
     color: #495057;
-    font-size: 12px;
-
-
-
+    font-size: 0.75rem;
 }
-.imagenFrame1 {
-    width: 40%;
-}
-.div_secundario{
+
+.div_secundario {
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
-    width: 400px;
-    height: 900px;
+    align-items: center;
+    width: 25%;
+    height: auto;
+    margin: 2% 1% 3% 0%;
+    padding-bottom: 10%;
     background-color: #FFFFFF;
-    margin: 40px 40px 40px 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 24px;
 }
-.div_secundario-imagenmuneco{
+
+.div_secundario-imagenmuneco {
     flex-shrink: 0;
-    padding: 243px 32px 32px 32px ;
+    padding: 30% 0% 32px 0%;
+    width: 65%;
 }
-.div_secundario-containertextos{
+
+.div_secundario-containertextos {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    margin: 32px 32px 0px 32px;
     text-align: center;
-    
+    font-size: 0.8rem;
+    width: auto;
+}
+
+@media (max-width: 1200px){
+    .container_main{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .div_secundario-imagenmuneco{
+        width: 0%;
+        height: 0%;
+    }
+    .div_principal-logoAlura {
+        margin: 2% 0% 0% 0%;
+        width: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        float: left;
+    }
+} */
+@media (max-width: 1200px) {
+    .div_logoAlura{
+        margin-bottom: 20%;
+    }
+    .div_main{
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+    }
+    #textarea{
+        width: 90%;
+        padding-left: 0%;
+        margin-left: 4%;
+    }
+    .div_textoEncriptar{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .div_textoEncriptar-mensajeIndicativo {
+        margin: 0%;
+        padding-right: 10%;
+    }
+    .div_textoEncriptar-botones{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3%;
+    }
+    .div_textoEncriptar-botonEncriptar{
+        width: 100%;
+        padding: 4% 0% 4% 0%;
+    }
+    .div_textoEncriptar-botonDesencriptar{
+        width: 100%;
+        padding: 4% 0% 4% 0%;
+    }
+    .div_textoDesencriptado{
+        width: auto;
+        margin-top: 15%;
+        margin-bottom: 10%;
+        margin-left: 6%;
+        margin-right: 6%;
+        justify-content: center;
+        padding-bottom: 5%;
+    }
+
+    .div_textoDesencriptado-imagenmuneco {
+        width: 0%;
+        height: 0%;
+    }
 }
