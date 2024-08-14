@@ -4,7 +4,7 @@
     --color-backaground: #F3F5FC;
     --color-texto-h2: #343A40;
     --color-texto-p: #495057;
-    --color-backaground-TextoDesencriptar: #FFFFFF;
+    --color-backaground-transparente:  rgb(255, 255, 255,0.70);
     --color-background-boton-encriptar: #0A3871;
     --color-background-boton-Desencriptar: #D8DFE8;
     --color-text-boton-encriptar: #FFFFFF;
@@ -17,6 +17,26 @@
     box-sizing: border-box;
 }
 
+/* particulas */
+#particles-js{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+/* Alertas estilo */
+
+.boton-personalizado{
+    background-color: #0A3871;
+    border-radius: 1rem;
+    width: 100%;
+}
+.clase-text{
+    font-family:"Inter", sans-serif;
+    font-weight: 400;
+    color: var(--color-background-boton-encriptar);
+}
+
 body {
     background-color: var(--color-backaground);
     box-sizing: border-box;
@@ -24,6 +44,29 @@ body {
     flex-direction: column;
     overflow: hidden;
 }
+button{
+    transition: trasnsfrom 0.1s ease;
+}
+button:hover{
+    transform: scale(1.04);
+}
+#alerta-oculta {
+    display: none; 
+    width: auto;
+    height: 7%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.1rem;
+    font-size: 1.2rem;
+    background-color: rgb(22, 65, 120,0.80); 
+    color: #FFFFFF; 
+    font-family:"Inter", sans-serif;
+    padding: 10px;  
+    margin-top: 10px; 
+    position: absolute; 
+    margin-top: 32%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
 
 .div_logoAlura {
     margin: 2% 0% 0% 0%;
@@ -31,6 +74,7 @@ body {
     display: flex;
     flex-direction: row;
     position: relative;
+    
 }
 
 .div_main {
@@ -39,6 +83,9 @@ body {
     box-sizing: border-box;
     width: auto;
     height: 90vh;
+    /* Para las particulas */
+    position: relative;
+    z-index: 99;
 }
 
 
@@ -59,14 +106,14 @@ body {
 ::placeholder {
     font-family: "Inter", sans-serif;
     color: var(--color-background-boton-encriptar);
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 }
 
 #textarea {
     box-sizing: border-box;
     width: auto;
     height: 70vh;
-    padding: 0%;
+    padding: 2%;
     margin-right: 20%;
     border: none;
     outline: none;
@@ -74,10 +121,11 @@ body {
     font-family: "Inter", sans-serif;
     color: var(--color-background-boton-encriptar);
     font-family: Inter;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 350;
     resize: none;
     overflow: hidden;
+    background-color: var(--color-backaground-transparente);
 }
 
 .div_textoEncriptar-mensajeIndicativo {
@@ -100,12 +148,13 @@ body {
     padding: 2.2% 0% 2.2% 0%;
     flex-shrink: 0;
     border-radius: 2rem;
-    background: var(--color-background-boton-encriptar);
-    font-size: 1rem;
+    background: rgba(10, 56, 113, 0.963);
+    font-size: 1.2rem;
     color: var(--color-text-boton-encriptar);
     font-style: normal;
     font-weight: 350;
     font-family: "Inter", sans-serif;
+    opacity: .99;
 }
 
 .div_textoEncriptar-botonDesencriptar {
@@ -114,12 +163,14 @@ body {
     flex-shrink: 0;
     border-radius: 2rem;
     border: 1px solid var(--color-text-boton-Desencriptar);
-    background: var(--color-background-boton-Desencriptar);
-    font-size: 1rem;
+    background:  rgba(255, 255, 255, 0.925);
+    font-size: 1.2rem;
     color: var(--color-text-boton-Desencriptar);
     font-style: normal;
     font-weight: 350;
     font-family: "Inter", sans-serif;
+    opacity: .99;
+    
 }
 
 .div_textoDesencriptado {
@@ -129,11 +180,12 @@ body {
     height: 100vh;
     margin-top: -3.5%;
     margin-bottom: 3%;
-    padding-top: 10%;
+    padding-top: 1%;
     flex-direction: column;
     align-items: center;
     height: auto;
-    background-color: var(--color-backaground-TextoDesencriptar);
+    /* background-color: var(--color-backaground-TextoDesencriptar); ORIGINAL DE CHARLIE*/
+    background-color: var(--color-backaground-transparente); /* Fondo blanco con 50% de transparencia */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 24px;
     /* overflow: scroll; */
@@ -143,20 +195,18 @@ body {
     display: none;
     height: 80%;
     width: 90%;
-    margin-top: 7%;
     font-family: "Inter", sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     /* overflow: hidden; */
     word-wrap: break-word;
-
+    margin-bottom: 10%;
 }
 
-#textoEncriptado {
+#textoAlterado {
     width: 100%;
     height: 100%;
-    padding: 0.1%;
+    padding: 4%;
     color: var(--color-texto-p);
-    margin-bottom: 10%;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -164,8 +214,8 @@ body {
     font-size: 1.5rem;
     font-weight: 350;
     resize: none;
-    overflow: scroll;
-
+    overflow: none;
+    background-color: var(--color-backaground-transparente);
 
 }
 
@@ -183,7 +233,7 @@ body {
     border-radius: 1.5rem;
     border: 1px solid var(--color-text-boton-Desencriptar);
     background: var(--color-backaground-TextoDesencriptar);
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-text-boton-Desencriptar);
     font-style: normal;
     font-weight: 350;
@@ -191,8 +241,8 @@ body {
 }
 
 .div_textoDesencriptado-imagenmuneco {
-    padding: 0% 0% 32px 0%;
-    width: 100%;
+    padding: 45% 0% 32px 0%;
+    width: 77%;
     height: auto;
     background-color: var(--color-backaground-TextoDesencriptar);
 }
@@ -225,8 +275,12 @@ p {
     body {
         overflow: scroll;
     }
+    button:hover{
+        transform: scale(0.95);
+    }
 
     .div_logoAlura {
+        margin-top: 5%;
         margin-bottom: 10%;
     }
 
@@ -238,7 +292,6 @@ p {
 
     #textarea {
         width: 90%;
-        padding-left: 0%;
         margin-left: 4%;
         font-size: 2rem;
         overflow: scroll;
@@ -250,7 +303,7 @@ p {
 
     .div_textoEncriptar {
         width: 100%;
-        height: 55%;
+        height: 60%;
         margin-left: 0%;
     }
 
@@ -258,6 +311,7 @@ p {
         margin: 0%;
         padding-right: 10%;
         font-size: 1rem;
+        padding-left: 5%;
     }
 
     .div_textoEncriptar-botones {
@@ -284,34 +338,44 @@ p {
 
     .div_textoDesencriptado {
         width: auto;
-        height: 45%;
-        margin-top: 10%;
+        height: 40%;
+        margin-top: 5%;
         margin-bottom: 10%;
         margin-left: 6%;
         margin-right: 6%;
+        padding-top: 0%;
+        padding-bottom: 2%;
         justify-content: center;
-        padding-bottom: 5%;
+        margin-bottom: 1%;
     }
-    #textoDesencriptado{
+
+    #textoAlterado {
         overflow: scroll;
+        height: 110%;
     }
 
     #div_botonCopiar {
         box-sizing: border-box;
         display: none;
         width: 100%;
-        height: 20%;
-        margin-bottom: 10%;
+        height: 30%;
+        margin-bottom: 0%;
         justify-content: center;
+    }
+
+    #botonCopiar {
+        border-radius: 0.7rem;
+        height: 70%;
     }
 
 
     .div_textoDesencriptado-imagenmuneco {
-        width: 0%;
-        height: 0%;
+        display: none;
     }
 
     .div_textoDesencriptado-containertextos {
         font-size: 1.2rem;
     }
 }
+
+

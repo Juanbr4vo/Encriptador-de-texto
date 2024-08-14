@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Encriptador</title>
+    <title>Encriptador de texto</title>
 </head>
 
 <body>
+    <!-- ID Particles.js -->
+    <div id="particles-js"></div>
+
     <div class="div_logoAlura">
         <svg xmlns="http://www.w3.org/2000/svg" width="120" height="48" viewBox="0 0 120 48" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -40,25 +43,36 @@
             <div id="" class="div_textoEncriptar-botones">
                 <button onclick="encriptarTexto();" id="div_textoEncriptar-botonEncriptar"
                     class="div_textoEncriptar-botonEncriptar">Encriptar</button>
-                <button class="div_textoEncriptar-botonDesencriptar">Desencriptar</button>
+                <button onclick="desencriptarTexto();" class="div_textoEncriptar-botonDesencriptar"
+                    id="div_textoEncriptar-botonDesencriptar">Desencriptar</button>
             </div>
         </div>
         <div id="div_textoDesencriptado" class="div_textoDesencriptado">
-            <div id="div_textoEncriptado" class="div_textoDesencriptado-textoEncriptado">
-                <textarea id="textoEncriptado"></textarea>
+            <div id="div_textoEncriptado" class="flexHidden">
+                <textarea id="textoAlterado"></textarea>
             </div>
-            <div id="div_botonCopiar">
-                <button id="botonCopiar">Copiar</button>
+            <div id="alerta-oculta">¡Copiado con éxito!</div>
+            <div id="div_botonCopiar" class="flexHidden">
+                <button onclick="copiar();" id="botonCopiar">Copiar</button>
             </div>
-            <img id="imagenMuneco" class="div_textoDesencriptado-imagenmuneco" src="./assets/muñeco.png"
+            <img id="imagenMuneco" class="div_textoDesencriptado-imagenmuneco flexStart" src="./assets/muñeco.png"
                 alt="muñeco con una lupa">
-            <div id="containerTextos" class="div_textoDesencriptado-containertextos">
+            <div id="containerTextos" class="div_textoDesencriptado-containertextos flexStart">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
+
+    <!-- JS Particles -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- JS script Encriptar/Desencriptar -->
+    <script src="script.js"></script>
 </body>
 
-</html>
+</htm
